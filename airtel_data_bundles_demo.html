@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airtel — Restez connecté</title>
+<style>
+:root{--red:#c9182b;--deep:#680b12;--gold:#ffd43b;--ink:#171717;--paper:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#a91622 0%,#790d15 47%,#5e0a10 100%);color:#fff;min-height:100vh}
+header{min-height:138px;padding:18px 24px 28px;position:relative;text-align:center}
+.brand{position:absolute;left:22px;top:18px;font-weight:900;font-size:19px;letter-spacing:-.8px;text-align:left;line-height:1}
+.brand small{display:block;font-size:7px;letter-spacing:.4px;font-weight:600;margin-top:4px}
+.top-note{position:absolute;right:22px;top:18px;font-size:10px;font-weight:700;text-align:right}
+.hero{padding-top:14px;max-width:480px;margin:auto}
+.pill{display:inline-block;border:1px solid rgba(255,255,255,.45);border-radius:30px;padding:5px 14px;font-size:10px;margin-bottom:10px}
+h1{font-family:Georgia,serif;font-size:clamp(26px,4vw,38px);line-height:1.02;margin:0;font-weight:800}
+h1 span{color:var(--gold)}
+.hero p{font-family:Georgia,serif;font-size:12px;line-height:1.45;margin:12px auto 0;max-width:340px;color:#ffe9e9}
+main{max-width:1500px;margin:0 auto;padding:0 12px 16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.plan{background:var(--paper);color:var(--ink);border-radius:9px;padding:14px 12px 10px;min-height:150px;box-shadow:0 3px 0 rgba(255,208,70,.45);position:relative;display:flex;flex-direction:column;align-items:center;text-align:center}
+.plan.featured{background:#fffaf0}
+.badge{position:absolute;top:-7px;left:12px;background:#ef7d22;color:white;border-radius:8px;padding:3px 8px;font-size:9px;font-weight:800;box-shadow:0 2px 4px #500}
+.label{font-size:10px;color:#777;margin:0 0 4px}
+.data{font-family:Georgia,serif;font-size:clamp(25px,3vw,35px);font-style:italic;color:#e31837;font-weight:900;line-height:1}
+.data small{font-size:12px;font-style:normal;margin-left:2px}
+.validity{font-size:10px;color:#777;margin-top:5px}
+.divider{height:1px;background:#e8e8e8;width:100%;margin:10px 0 8px}
+.price{font-family:Georgia,serif;font-size:19px;font-weight:800}
+.currency{font-family:Arial,sans-serif;font-size:9px;font-weight:600;color:#555;margin-left:3px}
+.choose{margin-top:auto;width:100%;border:0;border-radius:30px;background:var(--red);color:white;font-size:10px;font-weight:800;letter-spacing:.3px;padding:11px 12px;cursor:pointer;transition:transform .15s,background .15s}
+.choose:hover{background:#a90f21;transform:translateY(-1px)}
+.choose:focus-visible{outline:3px solid #ffcf37;outline-offset:2px}
+.plan.unlimited{grid-column:1/-1}
+footer{max-width:1500px;margin:0 auto;padding:4px 12px 24px}
+.footer-links{border:1px solid rgba(255,255,255,.25);border-radius:7px;display:flex;justify-content:space-around;gap:10px;padding:14px 8px;font-size:10px;font-weight:700}
+.footer-links a{color:#fff;text-decoration:none}
+.copyright{text-align:center;font-size:9px;color:#f4cfd1;margin-top:18px}
+.notice{max-width:900px;margin:0 auto 14px;padding:0 16px;text-align:center;font-size:11px;color:#ffe1a6}
+dialog{border:0;border-radius:14px;padding:25px;width:min(92vw,420px);box-shadow:0 18px 70px #260005;color:#222;text-align:center}
+dialog::backdrop{background:rgba(22,0,2,.68)}
+dialog h2{margin:0 0 10px;color:#b91528}
+dialog p{line-height:1.5}
+.dialog-actions{display:flex;gap:10px;margin-top:20px}
+.dialog-actions button{flex:1;border:0;border-radius:24px;padding:12px;cursor:pointer;font-weight:700}
+.cancel{background:#eee;color:#222}.confirm{background:var(--red);color:white}
+@media(min-width:1100px){header{min-height:190px;padding-top:28px}.hero{padding-top:10px}.plan{min-height:172px;padding-top:20px}main{gap:10px;padding-left:16px;padding-right:16px}}
+@media(max-width:560px){header{padding:16px 12px 24px;min-height:170px}.brand{left:12px;top:12px;font-size:16px}.top-note{right:12px;top:12px;font-size:8px}.hero{padding-top:45px}.hero p{font-size:11px}main{grid-template-columns:1fr;padding:0 10px 14px;gap:9px}.plan{min-height:150px}.plan.unlimited{grid-column:auto}.footer-links{flex-direction:column;align-items:center}.footer-links a{padding:4px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">◉ airtel<small>the smartphone network</small></div>
+  <div class="top-note">SERVICE CLIENT<br><span style="font-size:13px">STAY CONNECTED</span></div>
+  <div class="hero">
+    <div class="pill">✨ Forfaits Internet</div>
+    <h1>Restez<br>Connecté<br><span>Sans Limites</span></h1>
+    <p>Choisissez un forfait. Vous avez une page de connexion dédiée pour profiter de vos gigas à tout moment.</p>
+  </div>
+</header>
+<main id="plans" aria-label="Forfaits Internet">
+  <article class="plan featured" data-data="5 GB" data-price="436" data-validity="1 jour">
+    <p class="label">5G</p><div class="data">5<small>GB</small></div><div class="validity">Valide 1 jour</div><div class="divider"></div><div class="price">436<span class="currency">CDF</span></div><button class="choose">CHOISIR CE FORFAIT</button>
+  </article>
+  <article class="plan" data-data="10 GB" data-price="895" data-validity="2 jours">
+    <p class="label">10</p><div class="data">10<small>GB</small></div><div class="validity">Valide 2 jours</div><div class="divider"></div><div class="price">895<span class="currency">CDF</span></div><button class="choose">CHOISIR CE FORFAIT</button>
+  </article>
+  <article class="plan" data-data="20 GB" data-price="1813" data-validity="7 jours">
+    <p class="label">20</p><div class="data">20<small>GB</small></div><div class="validity">Valide 7 jours</div><div class="divider"></div><div class="price">1813<span class="currency">CDF</span></div><button class="choose">CHOISIR CE FORFAIT</button>
+  </article>
+  <article class="plan" data-data="40 GB" data-price="3420" data-validity="7 jours">
+    <span class="badge">✦ Populaire</span><p class="label">40</p><div class="data">40<small>GB</small></div><div class="validity">Valide 7 jours</div><div class="divider"></div><div class="price">3420<span class="currency">CDF</span></div><button class="choose">CHOISIR CE FORFAIT</button>
+  </article>
+  <article class="plan" data-data="80 GB" data-price="6863" data-validity="30 jours">
+    <span class="badge">★ Pro</span><p class="label">80</p><div class="data">80<small>GB</small></div><div class="validity">Valide 30 jours</div><div class="divider"></div><div class="price">6863<span class="currency">CDF</span></div><button class="choose">CHOISIR CE FORFAIT</button>
+  </article>
+  <article class="plan" data-data="120 GB" data-price="12601" data-validity="30 jours">
+    <span class="badge">⚡ Max</span><p class="label">120</p><div class="data">120<small>GB</small></div><div class="validity">Valide 30 jours</div><div class="divider"></div><div class="price">12601<span class="currency">CDF</span></div><button class="choose">CHOISIR CE FORFAIT</button>
+  </article>
+  <article class="plan featured unlimited" data-data="Illimité" data-price="17190" data-validity="30 jours">
+    <span class="badge">👑 Illimité</span><p class="label">Sans limite</p><div class="data">∞<small></small></div><div class="validity">Valide 30 jours</div><div class="divider"></div><div class="price">17190<span class="currency">CDF</span></div><button class="choose">CHOISIR CE FORFAIT</button>
+  </article>
+</main>
+<div class="notice">Prototype de démonstration : les boutons simulent la sélection d'un forfait. Aucun paiement ni achat réel n'est effectué.</div>
+<footer>
+  <nav class="footer-links"><a href="#plans">♢ Assistance téléphonique</a><span aria-hidden="true">|</span><a href="#plans">ⓘ Politique de confidentialité</a><span aria-hidden="true">|</span><a href="#plans">☎ Support 24/7</a></nav>
+  <div class="copyright">© 2026 — Prototype de site de forfaits Internet.</div>
+</footer>
+<dialog id="checkout">
+  <h2>Confirmer votre forfait</h2>
+  <p id="selection"></p>
+  <p style="font-size:12px;color:#666">Ceci est une démonstration. Le paiement n'est pas connecté.</p>
+  <div class="dialog-actions"><button class="cancel" id="closeDialog">Retour</button><button class="confirm" id="confirmDemo">Continuer</button></div>
+</dialog>
+<script>
+const dialog = document.querySelector('#checkout');
+const selection = document.querySelector('#selection');
+document.querySelectorAll('.choose').forEach(button => {
+  button.addEventListener('click', () => {
+    const plan = button.closest('.plan');
+    selection.textContent = `Forfait ${plan.dataset.data} — ${plan.dataset.price} CDF, valable ${plan.dataset.validity}.`;
+    dialog.showModal();
+  });
+});
+document.querySelector('#closeDialog').addEventListener('click', () => dialog.close());
+document.querySelector('#confirmDemo').addEventListener('click', () => {
+  dialog.close();
+  alert('Merci ! La sélection fonctionne. Pour accepter de vrais paiements, il faudra connecter un système de paiement et vérifier les forfaits officiels.');
+});
+</script>
+</body>
+</html>
